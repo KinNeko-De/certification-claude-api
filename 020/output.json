@@ -1,0 +1,23 @@
+[
+  {
+    "output": "# One-Day Meal Plan for Marathon Training Athlete\n\nHere is a one-day meal plan for an athlete training for a marathon with dairy-free dietary requirements:\n\n* **Calorie Target:** 3,500 calories\n* **Macronutrient Breakdown:** Protein (525g), Fat (525g), Carbs (2,100g)\n\n**Meal Plan:**\n\n* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), almond butter (25g), and coconut milk (240ml).\n  * Protein: 18g, Fat: 12g, Carbs: 85g\n\n* **Mid-Morning Snack (10:00 AM):** Energy bar (50g) with dates (80g) and almonds (30g).\n  * Protein: 12g, Fat: 14g, Carbs: 65g\n\n* **Lunch (1:00 PM):** Grilled chicken breast (180g), brown rice (150g cooked), steamed broccoli (200g), and olive oil dressing (15ml).\n  * Protein: 48g, Fat: 18g, Carbs: 75g\n\n* **Pre-Training Snack (3:30 PM):** White bread (80g), honey (30g), and peanut butter (20g).\n  * Protein: 10g, Fat: 10g, Carbs: 60g\n\n* **Post-Training Snack (5:30 PM):** Sweet potato (200g) with lean ground turkey (120g) and vegetables (100g mixed).\n  * Protein: 32g, Fat: 8g, Carbs: 55g\n\n* **Dinner (7:30 PM):** Baked salmon (160g), quinoa (120g cooked), roasted asparagus (150g), and olive oil (10ml).\n  * Protein: 38g, Fat: 16g, Carbs: 65g\n\n* **Evening Snack (9:30 PM):** Rice cakes (60g), almond butter (20g), and banana (100g).\n  * Protein: 12g, Fat: 10g, Carbs: 65g\n\nThis meal plan emphasizes complex carbohydrates for sustained energy, lean proteins for muscle recovery, and healthy fats for hormone production\u2014all essential for marathon training success while avoiding all dairy products.",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "75 kg",
+        "goal": "Marathon training with 3,500+ calorie requirement and 60% carbs, 25% protein, 15% fat macronutrient split",
+        "restrictions": "No dairy"
+      },
+      "solution_criteria": [
+        "Meal plan totals 3,500+ calories across all meals",
+        "Macronutrient distribution meets 60% carbs, 25% protein, 15% fat targets (\u00b15% tolerance)",
+        "Includes pre-training, during-training (if applicable), and post-training meal timing recommendations",
+        "All meals are dairy-free and practical for single-day consumption"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3,500+ calories with specific macronutrient ratios (60% carbs, 25% protein, 15% fat) and timing around training sessions"
+    },
+    "score": 5,
+    "reasoning": "The solution meets all three mandatory requirements on the surface: it includes daily caloric total (3,500 calories stated), macronutrient breakdown (listed), and meals with exact foods, portions, and timing. However, upon detailed verification, the actual macronutrient distribution fails the secondary criteria. The protein percentage is approximately 19.4% instead of the required 25% (\u00b15% tolerance = 20-30%), representing a 5.6 percentage point shortfall outside acceptable range. The carbohydrate and fat percentages are closer to targets but the protein deficiency is a material failure of the stated criteria. The meal plan is otherwise well-structured, dairy-free, and appropriately timed for marathon training, but the macronutrient miscalculation is a significant flaw."
+  }
+]
