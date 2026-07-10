@@ -1,18 +1,77 @@
 [
   {
     "prompt_inputs": {
-      "height": "180 cm",
-      "weight": "75 kg",
-      "goal": "Marathon training with 3,500+ calorie requirement and 60% carbs, 25% protein, 15% fat macronutrient split",
-      "restrictions": "No dairy"
+      "height": "175",
+      "weight": "70",
+      "goal": "endurance training recovery",
+      "restrictions": "vegetarian, nut allergy, dairy intolerance"
     },
     "solution_criteria": [
-      "Meal plan totals 3,500+ calories across all meals",
-      "Macronutrient distribution meets 60% carbs, 25% protein, 15% fat targets (\u00b15% tolerance)",
-      "Includes pre-training, during-training (if applicable), and post-training meal timing recommendations",
-      "All meals are dairy-free and practical for single-day consumption"
+      "All meals satisfy vegetarian, nut-free, and dairy-free requirements",
+      "Meal plan is compact (breakfast, lunch, dinner, snacks) with adequate protein and calories for athletic performance",
+      "Includes creative substitutions for dairy-based and restricted ingredients"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3,500+ calories with specific macronutrient ratios (60% carbs, 25% protein, 15% fat) and timing around training sessions"
+    "scenario": "Athlete with multiple dietary restrictions (vegetarian, nut allergy, dairy intolerance) requiring creative substitutions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Build muscle mass through strength training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Presents a complete 1-day meal plan with 3 main meals in a concise format",
+      "Provides high protein content suitable for muscle building (at least 1.6g per kg body weight)",
+      "Creates a caloric surplus to support weight gain during muscle building"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Strength-training athlete with muscle-building focus requiring high protein intake and calorie surplus"
+  },
+  {
+    "prompt_inputs": {
+      "height": "175",
+      "weight": "70",
+      "goal": "Fuel a marathon training day with high-carbohydrate, easily digestible meals",
+      "restrictions": "none"
+    },
+    "solution_criteria": [
+      "All meals are easily digestible and carbohydrate-rich",
+      "Covers a complete one-day meal schedule",
+      "Presentation is concise and practical"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Endurance athlete (marathon runner) with high carbohydrate requirements and need for easily digestible meals on training day"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "75 kg",
+      "goal": "build muscle mass",
+      "restrictions": "none"
+    },
+    "solution_criteria": [
+      "All meals require minimal prep time (no cooking, microwave/assembly only)",
+      "Covers breakfast, lunch, dinner, and at least one snack throughout the day",
+      "Provides high-protein options to support muscle-building goals"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "College athlete with minimal meal prep time and limited kitchen access needing quick, convenient options"
+  },
+  {
+    "prompt_inputs": {
+      "height": "172 cm",
+      "weight": "62 kg",
+      "goal": "Achieve 60kg competition weight while maintaining training performance",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers exactly 1 day with 3-4 meals and portion sizes specified",
+      "Total daily calories between 1800-2000 with minimum 120g protein to support weight loss and training",
+      "Meals are practical and straightforward to prepare"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Lightweight combat sport athlete (wrestler/boxer) requiring calorie deficit while maintaining performance and energy for training"
   }
 ]
