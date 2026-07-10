@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Extract AWS S3 bucket names from a list of S3 ARNs in the format 'arn:aws:s3:::bucket-name'",
+    "format": "regex"
+  },
+  {
+    "task": "Create a JSON configuration object for an AWS Lambda function that includes runtime, handler, timeout, and memory allocation settings",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that validates if a given string is a valid AWS EC2 instance ID (format: i-followed by 8 or 17 hexadecimal characters)",
+    "format": "python"
+  }
+]
