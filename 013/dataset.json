@@ -1,14 +1,17 @@
 [
   {
-    "task": "Extract AWS S3 bucket names from a list of S3 ARNs in the format 'arn:aws:s3:::bucket-name'",
-    "format": "regex"
+    "task": "Write a Python function that validates AWS S3 bucket names according to AWS naming rules (3-63 characters, lowercase letters, numbers, hyphens, must start and end with letter or number, no consecutive hyphens)",
+    "format": "python",
+    "key_criteria_for_evaluation": "Function correctly validates all AWS S3 bucket naming constraints, includes clear variable names, handles edge cases (empty strings, mixed case, special characters), and returns boolean with optional error message"
   },
   {
-    "task": "Create a JSON configuration object for an AWS Lambda function that includes runtime, handler, timeout, and memory allocation settings",
-    "format": "json"
+    "task": "Create a JSON IAM policy document that grants read-only access to a specific S3 bucket (GetObject, ListBucket actions) for a principal in the same AWS account",
+    "format": "json",
+    "key_criteria_for_evaluation": "Policy includes required Version, Statement with correct Effect, Action, and Resource fields, uses appropriate ARN syntax with wildcards where applicable, and follows AWS IAM policy best practices"
   },
   {
-    "task": "Write a Python function that validates if a given string is a valid AWS EC2 instance ID (format: i-followed by 8 or 17 hexadecimal characters)",
-    "format": "python"
+    "task": "Write a regular expression that extracts the AWS account ID (12 digits) and resource name from an S3 ARN in the format 'arn:aws:s3:::bucket-name/key-path'",
+    "format": "regex",
+    "key_criteria_for_evaluation": "Regex correctly captures bucket name and key path components, handles ARNs with and without trailing slashes, uses appropriate grouping for extraction, and accounts for valid AWS naming constraints (hyphens, underscores)"
   }
 ]
