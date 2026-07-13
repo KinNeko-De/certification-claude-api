@@ -1,0 +1,46 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in topological quantum computing leverage non-abelian anyons as qubits to achieve inherent protection against decoherence through topological protection mechanisms. Unlike conventional qubit approaches that rely on stabilizer codes and resource-intensive Toffoli gate implementations, topological systems exploit Majorana fermion braiding to perform quantum operations. The realization of Majorana zero modes in semiconductor-superconductor hybrid structures has enabled experimental demonstrations of non-abelian statistics, a crucial prerequisite for fault-tolerant quantum computation. Furthermore, topological surface codes promise improved logical error rates compared to planar codes by utilizing the inherent topological order in 2D quantum systems, where anyonic excitations encode quantum information through their worldlines."
+    },
+    "solution_criteria": [
+      "All major technical topics and specialized terminology from the passage are identified",
+      "Output is a valid JSON array of strings"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Highly technical scientific passage with specialized terminology from a narrow field (e.g., quantum computing or molecular biology) to test handling of domain-specific jargon"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent investigations into the psychological impacts of social media adoption reveal complex relationships between digital engagement patterns and individual wellbeing outcomes. Machine learning algorithms that curate personalized content feeds have been shown to influence cognitive load and information processing behaviors, while simultaneously amplifying existing social inequalities in access to digital literacy resources. The resulting digital divide has profound implications for community engagement and social cohesion, particularly affecting vulnerable populations with limited technological infrastructure. Furthermore, the psychology of algorithm-driven content recommendation systems interacts with behavioral economics principles to shape user attention allocation and decision-making processes. These interconnected dynamics highlight how technological innovation, individual psychology, and macro-level social structures converge in contemporary digital societies, requiring interdisciplinary frameworks to understand emergent effects on public health, social networks, and economic opportunity distribution."
+    },
+    "solution_criteria": [
+      "Extracts all major topics from across psychology, technology, and social science domains",
+      "Topics are specific and relevant to the passage content"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Interdisciplinary passage mixing psychology, technology, and social science topics to test extraction across multiple academic domains"
+  },
+  {
+    "prompt_inputs": {
+      "content": "During early postnatal development, altered sensory input initiates widespread reorganization throughout primary cortical regions. Dendritic spine density increased dramatically within cortico-subcortical pathways, while concurrent elevations in neurotrophic factors and synaptic receptor modifications were observed. These structural and molecular changes correlated with enhanced performance on compensatory behavioral tasks, suggesting coordinated mechanisms linking neural substrate alterations to functional adaptation."
+    },
+    "solution_criteria": [
+      "Identifies all major topics despite their implicit nature and lack of explicit labels",
+      "Topics correctly reflect the passage's biological mechanisms and conceptual themes"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Brief, condensed passage where topics must be inferred rather than explicitly stated, testing extraction from minimal context"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in computer vision have been substantially driven by deep learning, particularly convolutional neural networks (CNNs), which represent a specialized category of neural networks optimized for processing image data. While deep learning operates as a subset of machine learning methods, its hierarchical feature learning through multiple layers fundamentally distinguishes it from traditional machine learning approaches. Transfer learning has emerged as a critical technique, enabling practitioners to leverage pre-trained deep learning models\u2014initially developed on large-scale datasets\u2014and fine-tune them for domain-specific computer vision applications such as medical image analysis, object detection, and autonomous vehicle perception. The combination of neural network architectures with transfer learning techniques continues to accelerate progress in semantic segmentation and scene understanding tasks."
+    },
+    "solution_criteria": [
+      "Identifies all major distinct topics mentioned (machine learning, deep learning, neural networks, convolutional neural networks, transfer learning, computer vision, object detection, semantic segmentation, etc.)",
+      "Appropriately distinguishes between hierarchical/overlapping concepts without conflating them (e.g., separates 'machine learning' from 'deep learning', and 'neural networks' from 'convolutional neural networks')"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Passage with multiple overlapping or hierarchically related concepts (e.g., machine learning, deep learning, neural networks) to test topic discrimination and appropriate granularity"
+  }
+]

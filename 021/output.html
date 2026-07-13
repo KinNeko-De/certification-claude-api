@@ -1,0 +1,268 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }cl
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">1.8 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">0.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Highly technical scientific passage with specialized terminology from a narrow field (e.g., quantum computing or molecular biology) to test handling of domain-specific jargon</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in topological quantum computing leverage non-abelian anyons as qubits to achieve inherent protection against decoherence through topological protection mechanisms. Unlike conventional qubit approaches that rely on stabilizer codes and resource-intensive Toffoli gate implementations, topological systems exploit Majorana fermion braiding to perform quantum operations. The realization of Majorana zero modes in semiconductor-superconductor hybrid structures has enabled experimental demonstrations of non-abelian statistics, a crucial prerequisite for fault-tolerant quantum computation. Furthermore, topological surface codes promise improved logical error rates compared to planar codes by utilizing the inherent topological order in 2D quantum systems, where anyonic excitations encode quantum information through their worldlines.</td>
+                <td class="criteria">• All major technical topics and specialized terminology from the passage are identified<br>• Output is a valid JSON array of strings</td>
+                <td class="output"><pre># Topics in This Text
+
+The passage covers several interconnected topics in **topological quantum computing**:
+
+## Core Concepts
+- **Non-abelian anyons** – exotic quasiparticles used as qubits
+- **Topological protection** – inherent protection against decoherence (a key advantage over conventional qubits)
+- **Non-abelian statistics** – unique quantum properties of anyons essential for fault-tolerant computation
+
+## Technical Components
+- **Majorana fermions** – particles used for braiding-based quantum operations
+- **Majorana zero modes** – localized states in semiconductor-superconductor hybrid structures
+- **Semiconductor-superconductor hybrid structures** – the physical platform for realizing Majorana modes
+
+## Error Correction & Codes
+- **Topological surface codes** – improved quantum error correction using 2D topological order
+- **Planar codes** – conventional approach with higher logical error rates
+- **Stabilizer codes** – the resource-intensive alternative approach mentioned
+
+## Applications
+- **Fault-tolerant quantum computation** – the ultimate goal
+- **Anyonic excitations and worldlines** – how quantum information is encoded and manipulated in topological systems
+
+**In summary:** The text discusses how topological quantum computing uses exotic particles (anyons/Majoranas) to build more robust quantum computers, with particular focus on experimental implementations and improvements in error correction codes.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">This solution demonstrates clear comprehension of the source material and correctly identifies relevant topics. However, it catastrophically fails the mandatory format requirements. The task explicitly requires a JSON array of strings with no other content, but the solution delivers a markdown document with categories, explanations, and a summary. The absence of any JSON structure and the presence of extensive commentary are direct violations of the stated mandatory requirements, resulting in an automatic low score regardless of topic identification quality.</td>
+            </tr>
+        
+            <tr>
+                <td>Interdisciplinary passage mixing psychology, technology, and social science topics to test extraction across multiple academic domains</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent investigations into the psychological impacts of social media adoption reveal complex relationships between digital engagement patterns and individual wellbeing outcomes. Machine learning algorithms that curate personalized content feeds have been shown to influence cognitive load and information processing behaviors, while simultaneously amplifying existing social inequalities in access to digital literacy resources. The resulting digital divide has profound implications for community engagement and social cohesion, particularly affecting vulnerable populations with limited technological infrastructure. Furthermore, the psychology of algorithm-driven content recommendation systems interacts with behavioral economics principles to shape user attention allocation and decision-making processes. These interconnected dynamics highlight how technological innovation, individual psychology, and macro-level social structures converge in contemporary digital societies, requiring interdisciplinary frameworks to understand emergent effects on public health, social networks, and economic opportunity distribution.</td>
+                <td class="criteria">• Extracts all major topics from across psychology, technology, and social science domains<br>• Topics are specific and relevant to the passage content</td>
+                <td class="output"><pre>The text covers several interconnected topics:
+
+1. **Social Media & Psychological Wellbeing** — the mental health and wellbeing effects of social media adoption
+
+2. **Machine Learning & Content Algorithms** — personalized content feed curation and algorithmic recommendation systems
+
+3. **Cognitive Science** — how algorithms affect cognitive load, information processing, and attention allocation
+
+4. **Digital Inequality & Access** — the digital divide, disparities in technological infrastructure, and unequal access to digital literacy resources
+
+5. **Behavioral Economics** — how economic principles apply to user behavior and decision-making on digital platforms
+
+6. **Social Cohesion & Community Engagement** — impacts on how communities interact and maintain social bonds
+
+7. **Vulnerable Populations** — specific effects on disadvantaged groups with limited tech access
+
+8. **Public Health & Social Networks** — broader implications for population health and social relationships
+
+9. **Socioeconomic Opportunity** — how technology shapes the distribution of economic opportunities
+
+The overarching theme is **the interconnection between technology, individual psychology, and societal structures** — essentially examining how digital innovation creates ripple effects across multiple dimensions of modern life. The text suggests an **interdisciplinary approach** is needed to understand these complex relationships.</pre></td>
+                <td class="score-col"><span class="score score-low">1</span></td>
+                <td class="reasoning">This solution completely fails all three mandatory requirements. While the underlying topic identification is thoughtful and comprehensive, the output format is entirely wrong. The task explicitly required a JSON array of strings with no extra text or commentary. Instead, the solution provides a markdown-formatted list with explanatory descriptions and additional analytical paragraphs. The format violation is automatic failure territory per the mandatory requirements.</td>
+            </tr>
+        
+            <tr>
+                <td>Brief, condensed passage where topics must be inferred rather than explicitly stated, testing extraction from minimal context</td>
+                <td class="prompt-inputs"><strong>content:</strong> During early postnatal development, altered sensory input initiates widespread reorganization throughout primary cortical regions. Dendritic spine density increased dramatically within cortico-subcortical pathways, while concurrent elevations in neurotrophic factors and synaptic receptor modifications were observed. These structural and molecular changes correlated with enhanced performance on compensatory behavioral tasks, suggesting coordinated mechanisms linking neural substrate alterations to functional adaptation.</td>
+                <td class="criteria">• Identifies all major topics despite their implicit nature and lack of explicit labels<br>• Topics correctly reflect the passage's biological mechanisms and conceptual themes</td>
+                <td class="output"><pre>This text covers several interconnected neuroscience topics related to how the developing brain adapts to changes:
+
+**Core Topics:**
+
+1. **Postnatal Brain Development** — Changes occurring early in development after birth
+
+2. **Sensory Input & Neural Plasticity** — How altered sensory experiences trigger widespread reorganization in the brain
+
+3. **Structural Changes:**
+   - Dendritic spine density (synaptic connections)
+   - Cortico-subcortical pathways (communication between cortex and deeper brain structures)
+
+4. **Molecular Mechanisms:**
+   - Neurotrophic factors (growth factors supporting nerve cells)
+   - Synaptic receptor modifications (changes to communication machinery between neurons)
+
+5. **Behavioral Adaptation/Compensation** — Enhanced performance on tasks that compensate for altered sensory input
+
+6. **Structure-Function Relationships** — How neural/molecular changes coordinate with functional behavioral outcomes
+
+**In essence**, this appears to be discussing how the developing brain responds to sensory deprivation or alteration by reorganizing itself at multiple levels (structural, molecular, and behavioral), allowing it to adapt and maintain or improve functional performance. This is likely research on neural plasticity and developmental compensation.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution fails all three mandatory requirements. The output must be a JSON array containing only topic strings with no extra commentary, and the response should contain the JSON array and nothing else. Instead, the solution provides a narrative explanation with numbered lists, detailed definitions, and conceptual summaries. While the solution demonstrates understanding of the passage content, it completely ignores the explicit format specifications, which are non-negotiable per the mandatory requirements section.</td>
+            </tr>
+        
+            <tr>
+                <td>Passage with multiple overlapping or hierarchically related concepts (e.g., machine learning, deep learning, neural networks) to test topic discrimination and appropriate granularity</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in computer vision have been substantially driven by deep learning, particularly convolutional neural networks (CNNs), which represent a specialized category of neural networks optimized for processing image data. While deep learning operates as a subset of machine learning methods, its hierarchical feature learning through multiple layers fundamentally distinguishes it from traditional machine learning approaches. Transfer learning has emerged as a critical technique, enabling practitioners to leverage pre-trained deep learning models—initially developed on large-scale datasets—and fine-tune them for domain-specific computer vision applications such as medical image analysis, object detection, and autonomous vehicle perception. The combination of neural network architectures with transfer learning techniques continues to accelerate progress in semantic segmentation and scene understanding tasks.</td>
+                <td class="criteria">• Identifies all major distinct topics mentioned (machine learning, deep learning, neural networks, convolutional neural networks, transfer learning, computer vision, object detection, semantic segmentation, etc.)<br>• Appropriately distinguishes between hierarchical/overlapping concepts without conflating them (e.g., separates 'machine learning' from 'deep learning', and 'neural networks' from 'convolutional neural networks')</td>
+                <td class="output"><pre>Here are the main topics covered in this text:
+
+1. **Computer Vision** – The primary field of focus, with emphasis on recent advances driven by deep learning
+
+2. **Deep Learning** – A subset of machine learning characterized by hierarchical feature learning across multiple layers
+
+3. **Convolutional Neural Networks (CNNs)** – Specialized neural network architectures optimized for processing image data
+
+4. **Machine Learning** – The broader category that encompasses deep learning approaches
+
+5. **Transfer Learning** – A key technique for adapting pre-trained models to new, domain-specific tasks
+
+6. **Pre-trained Models** – Deep learning models initially trained on large-scale datasets for reuse
+
+7. **Practical Applications**:
+   - Medical image analysis
+   - Object detection
+   - Autonomous vehicle perception
+
+8. **Semantic Segmentation** – Task for understanding and classifying different regions in images
+
+9. **Scene Understanding** – Comprehensive interpretation of visual scenes
+
+**In summary**: The text focuses on how **deep learning and CNNs, particularly through transfer learning**, have advanced computer vision capabilities for real-world applications like medical imaging, autonomous vehicles, and scene analysis.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution completely fails to meet all three mandatory requirements. The task explicitly requires: (1) a JSON array of strings, (2) strings with only topics and no commentary, and (3) ONLY the JSON array as the response. Instead, the solution provides a narrative explanation with numbered points, each containing explanatory text, followed by a summary paragraph. While the analysis demonstrates good content understanding and proper topic distinction, the output format is fundamentally wrong. This is an automatic failure per the mandatory requirements specification.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
