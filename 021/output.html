@@ -113,15 +113,15 @@
             <div class="summary-stats">
                 <div class="stat-box">
                     <div>Total Test Cases</div>
-                    <div class="stat-value">4</div>
+                    <div class="stat-value">8</div>
                 </div>
                 <div class="stat-box">
                     <div>Average Score</div>
-                    <div class="stat-value">1.8 / 10</div>
+                    <div class="stat-value">9.2 / 10</div>
                 </div>
                 <div class="stat-box">
                     <div>Pass Rate (≥7)</div>
-                    <div class="stat-value">0.0%</div>
+                    <div class="stat-value">100.0%</div>
                 </div>
             </div>
         </div>
@@ -140,125 +140,229 @@
             <tbody>
     
             <tr>
-                <td>Highly technical scientific passage with specialized terminology from a narrow field (e.g., quantum computing or molecular biology) to test handling of domain-specific jargon</td>
-                <td class="prompt-inputs"><strong>content:</strong> Recent advances in topological quantum computing leverage non-abelian anyons as qubits to achieve inherent protection against decoherence through topological protection mechanisms. Unlike conventional qubit approaches that rely on stabilizer codes and resource-intensive Toffoli gate implementations, topological systems exploit Majorana fermion braiding to perform quantum operations. The realization of Majorana zero modes in semiconductor-superconductor hybrid structures has enabled experimental demonstrations of non-abelian statistics, a crucial prerequisite for fault-tolerant quantum computation. Furthermore, topological surface codes promise improved logical error rates compared to planar codes by utilizing the inherent topological order in 2D quantum systems, where anyonic excitations encode quantum information through their worldlines.</td>
-                <td class="criteria">• All major technical topics and specialized terminology from the passage are identified<br>• Output is a valid JSON array of strings</td>
-                <td class="output"><pre># Topics in This Text
-
-The passage covers several interconnected topics in **topological quantum computing**:
-
-## Core Concepts
-- **Non-abelian anyons** – exotic quasiparticles used as qubits
-- **Topological protection** – inherent protection against decoherence (a key advantage over conventional qubits)
-- **Non-abelian statistics** – unique quantum properties of anyons essential for fault-tolerant computation
-
-## Technical Components
-- **Majorana fermions** – particles used for braiding-based quantum operations
-- **Majorana zero modes** – localized states in semiconductor-superconductor hybrid structures
-- **Semiconductor-superconductor hybrid structures** – the physical platform for realizing Majorana modes
-
-## Error Correction & Codes
-- **Topological surface codes** – improved quantum error correction using 2D topological order
-- **Planar codes** – conventional approach with higher logical error rates
-- **Stabilizer codes** – the resource-intensive alternative approach mentioned
-
-## Applications
-- **Fault-tolerant quantum computation** – the ultimate goal
-- **Anyonic excitations and worldlines** – how quantum information is encoded and manipulated in topological systems
-
-**In summary:** The text discusses how topological quantum computing uses exotic particles (anyons/Majoranas) to build more robust quantum computers, with particular focus on experimental implementations and improvements in error correction codes.</pre></td>
-                <td class="score-col"><span class="score score-low">2</span></td>
-                <td class="reasoning">This solution demonstrates clear comprehension of the source material and correctly identifies relevant topics. However, it catastrophically fails the mandatory format requirements. The task explicitly requires a JSON array of strings with no other content, but the solution delivers a markdown document with categories, explanations, and a summary. The absence of any JSON structure and the presence of extensive commentary are direct violations of the stated mandatory requirements, resulting in an automatic low score regardless of topic identification quality.</td>
+                <td>Testing with a passage heavy in acronyms and abbreviations (e.g., AI, ML, DNA, CRISPR) to assess whether topics are correctly identified despite compressed language</td>
+                <td class="prompt-inputs"><strong>content:</strong> Recent advances in machine learning (ML) and artificial intelligence (AI) have transformed bioinformatics. Deep neural networks (DNNs) now predict protein structures more accurately than traditional methods, accelerating drug discovery pipelines. CRISPR-Cas9 gene editing systems benefit from AI-optimized guide RNA design, reducing off-target mutations. Natural language processing (NLP) systems extract insights from biomedical literature, while convolutional neural networks (CNNs) improve pathological image analysis. Integration of AI with next-generation sequencing (NGS) enables rapid identification of genetic biomarkers for disease risk prediction.</td>
+                <td class="criteria">• Identifies all major topics despite heavy use of acronyms and abbreviations<br>• Returns a JSON array of strings</td>
+                <td class="output"><pre>[
+  "Machine learning",
+  "Artificial intelligence",
+  "Bioinformatics",
+  "Deep neural networks",
+  "Protein structure prediction",
+  "Drug discovery",
+  "CRISPR-Cas9 gene editing",
+  "Guide RNA design",
+  "Off-target mutations",
+  "Natural language processing",
+  "Biomedical literature analysis",
+  "Convolutional neural networks",
+  "Pathological image analysis",
+  "Next-generation sequencing",
+  "Genetic biomarkers",
+  "Disease risk prediction"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing each major topic mentioned in the article, with entries containing only topic names and no extra commentary, and the response contains only the JSON array. It also excellently addresses the secondary criterion of identifying all major topics despite heavy acronym/abbreviation use by expanding them to their full names. No topics are missed, and no spurious entries are included. The extraction quality is high.</td>
             </tr>
         
             <tr>
-                <td>Interdisciplinary passage mixing psychology, technology, and social science topics to test extraction across multiple academic domains</td>
-                <td class="prompt-inputs"><strong>content:</strong> Recent investigations into the psychological impacts of social media adoption reveal complex relationships between digital engagement patterns and individual wellbeing outcomes. Machine learning algorithms that curate personalized content feeds have been shown to influence cognitive load and information processing behaviors, while simultaneously amplifying existing social inequalities in access to digital literacy resources. The resulting digital divide has profound implications for community engagement and social cohesion, particularly affecting vulnerable populations with limited technological infrastructure. Furthermore, the psychology of algorithm-driven content recommendation systems interacts with behavioral economics principles to shape user attention allocation and decision-making processes. These interconnected dynamics highlight how technological innovation, individual psychology, and macro-level social structures converge in contemporary digital societies, requiring interdisciplinary frameworks to understand emergent effects on public health, social networks, and economic opportunity distribution.</td>
-                <td class="criteria">• Extracts all major topics from across psychology, technology, and social science domains<br>• Topics are specific and relevant to the passage content</td>
-                <td class="output"><pre>The text covers several interconnected topics:
-
-1. **Social Media & Psychological Wellbeing** — the mental health and wellbeing effects of social media adoption
-
-2. **Machine Learning & Content Algorithms** — personalized content feed curation and algorithmic recommendation systems
-
-3. **Cognitive Science** — how algorithms affect cognitive load, information processing, and attention allocation
-
-4. **Digital Inequality & Access** — the digital divide, disparities in technological infrastructure, and unequal access to digital literacy resources
-
-5. **Behavioral Economics** — how economic principles apply to user behavior and decision-making on digital platforms
-
-6. **Social Cohesion & Community Engagement** — impacts on how communities interact and maintain social bonds
-
-7. **Vulnerable Populations** — specific effects on disadvantaged groups with limited tech access
-
-8. **Public Health & Social Networks** — broader implications for population health and social relationships
-
-9. **Socioeconomic Opportunity** — how technology shapes the distribution of economic opportunities
-
-The overarching theme is **the interconnection between technology, individual psychology, and societal structures** — essentially examining how digital innovation creates ripple effects across multiple dimensions of modern life. The text suggests an **interdisciplinary approach** is needed to understand these complex relationships.</pre></td>
-                <td class="score-col"><span class="score score-low">1</span></td>
-                <td class="reasoning">This solution completely fails all three mandatory requirements. While the underlying topic identification is thoughtful and comprehensive, the output format is entirely wrong. The task explicitly required a JSON array of strings with no extra text or commentary. Instead, the solution provides a markdown-formatted list with explanatory descriptions and additional analytical paragraphs. The format violation is automatic failure territory per the mandatory requirements.</td>
+                <td>Testing with a medical/biology passage using Latin nomenclature and technical clinical terminology to assess handling of specialized domain vocabulary</td>
+                <td class="prompt-inputs"><strong>content:</strong> Infection with Staphylococcus aureus can result in acute suppurative lymphadenitis, characterized by inflamed regional lymph nodes and systemic febrile response. The pathophysiological mechanism involves alpha-toxin penetration of epithelial barriers, triggering pattern recognition receptor signaling and subsequent release of pro-inflammatory mediators including tumor necrosis factor-alpha, interleukin-6, and interleukin-8. Clinical manifestations typically include localized edema, erythema, and potential progression to bacteremia and sepsis if left untreated. Diagnostic confirmation via blood culture and lymph node aspiration culture remains the standard, with bacterial identification using Matrix-Assisted Laser Desorption/Ionization time-of-flight mass spectrometry. Therapeutic intervention typically involves broad-spectrum beta-lactam antibiotics targeting bacterial peptidoglycan synthesis, with vancomycin reserved for methicillin-resistant Staphylococcus aureus (MRSA) strains exhibiting altered penicillin-binding proteins. In cases of persistent suppuration, needle aspiration or surgical drainage of purulent material may be necessary to prevent extensive abscess formation in surrounding dermis and subcutaneous adipose tissue.</td>
+                <td class="criteria">• Identifies all major topics from the passage<br>• Correctly extracts Latin nomenclature and specialized medical terminology</td>
+                <td class="output"><pre>[
+  "Staphylococcus aureus",
+  "Acute suppurative lymphadenitis",
+  "Regional lymph node inflammation",
+  "Systemic febrile response",
+  "Alpha-toxin",
+  "Epithelial barriers",
+  "Pattern recognition receptor signaling",
+  "Pro-inflammatory mediators",
+  "Tumor necrosis factor-alpha",
+  "Interleukin-6",
+  "Interleukin-8",
+  "Localized edema",
+  "Erythema",
+  "Bacteremia",
+  "Sepsis",
+  "Blood culture",
+  "Lymph node aspiration culture",
+  "MALDI-TOF mass spectrometry",
+  "Bacterial identification",
+  "Broad-spectrum beta-lactam antibiotics",
+  "Bacterial peptidoglycan synthesis",
+  "Vancomycin",
+  "Methicillin-resistant Staphylococcus aureus (MRSA)",
+  "Penicillin-binding proteins",
+  "Needle aspiration and surgical drainage",
+  "Purulent material",
+  "Abscess formation",
+  "Dermis and subcutaneous adipose tissue"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is a valid JSON array containing only topic strings without commentary, and the response contains nothing but the array. It comprehensively identifies all major topics from the medical passage, correctly capturing Latin nomenclature (Staphylococcus aureus, MRSA), specialized terminology (cytokines, antibiotics, diagnostic methods), and procedural interventions. The 28 entries represent thorough coverage of the passage's content across all major domains.</td>
             </tr>
         
             <tr>
-                <td>Brief, condensed passage where topics must be inferred rather than explicitly stated, testing extraction from minimal context</td>
-                <td class="prompt-inputs"><strong>content:</strong> During early postnatal development, altered sensory input initiates widespread reorganization throughout primary cortical regions. Dendritic spine density increased dramatically within cortico-subcortical pathways, while concurrent elevations in neurotrophic factors and synaptic receptor modifications were observed. These structural and molecular changes correlated with enhanced performance on compensatory behavioral tasks, suggesting coordinated mechanisms linking neural substrate alterations to functional adaptation.</td>
-                <td class="criteria">• Identifies all major topics despite their implicit nature and lack of explicit labels<br>• Topics correctly reflect the passage's biological mechanisms and conceptual themes</td>
-                <td class="output"><pre>This text covers several interconnected neuroscience topics related to how the developing brain adapts to changes:
-
-**Core Topics:**
-
-1. **Postnatal Brain Development** — Changes occurring early in development after birth
-
-2. **Sensory Input & Neural Plasticity** — How altered sensory experiences trigger widespread reorganization in the brain
-
-3. **Structural Changes:**
-   - Dendritic spine density (synaptic connections)
-   - Cortico-subcortical pathways (communication between cortex and deeper brain structures)
-
-4. **Molecular Mechanisms:**
-   - Neurotrophic factors (growth factors supporting nerve cells)
-   - Synaptic receptor modifications (changes to communication machinery between neurons)
-
-5. **Behavioral Adaptation/Compensation** — Enhanced performance on tasks that compensate for altered sensory input
-
-6. **Structure-Function Relationships** — How neural/molecular changes coordinate with functional behavioral outcomes
-
-**In essence**, this appears to be discussing how the developing brain responds to sensory deprivation or alteration by reorganizing itself at multiple levels (structural, molecular, and behavioral), allowing it to adapt and maintain or improve functional performance. This is likely research on neural plasticity and developmental compensation.</pre></td>
-                <td class="score-col"><span class="score score-low">2</span></td>
-                <td class="reasoning">The solution fails all three mandatory requirements. The output must be a JSON array containing only topic strings with no extra commentary, and the response should contain the JSON array and nothing else. Instead, the solution provides a narrative explanation with numbered lists, detailed definitions, and conceptual summaries. While the solution demonstrates understanding of the passage content, it completely ignores the explicit format specifications, which are non-negotiable per the mandatory requirements section.</td>
+                <td>Testing with a computer science passage containing multiple programming paradigms and technical frameworks to verify accurate extraction of distinct technical topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> Modern software engineering increasingly adopts polyglot development approaches, integrating object-oriented programming for encapsulation and structural clarity with functional programming paradigms that emphasize immutability and composability. Reactive programming frameworks address scalability demands in distributed systems, while domain-driven design patterns provide systematic guidance for architectural decisions in complex enterprises. The rise of microservices architecture, enabled by containerization technologies and orchestration platforms such as Kubernetes, has fundamentally transformed deployment and scaling strategies. Concurrently, event-driven architecture and asynchronous processing models have become essential patterns for managing concurrent workloads in high-throughput, fault-tolerant systems.</td>
+                <td class="criteria">• Extracts all distinct programming paradigms and technical frameworks mentioned<br>• Returns results formatted as a JSON array of strings</td>
+                <td class="output"><pre>[
+  "Polyglot development",
+  "Object-oriented programming",
+  "Functional programming",
+  "Immutability and composability",
+  "Reactive programming",
+  "Distributed systems",
+  "Scalability",
+  "Domain-driven design",
+  "Microservices architecture",
+  "Containerization",
+  "Orchestration platforms",
+  "Deployment and scaling strategies",
+  "Event-driven architecture",
+  "Asynchronous processing",
+  "Concurrent workloads",
+  "High-throughput, fault-tolerant systems"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it's a valid JSON array of strings containing clean topic entries with no extraneous commentary, and the response contains only the array. It successfully extracts all major programming paradigms (OOP, FP, Reactive, Event-driven, Asynchronous) and technical frameworks (DDD, Microservices, Containerization, Orchestration) mentioned in the passage. The primary concern is a subtle inconsistency in extracting some characteristics as separate topics (Immutability/composability) while omitting others (Encapsulation), though this is a minor issue. The solution demonstrates solid comprehension of the source material at an appropriate level of abstraction for scholarly article topic extraction.</td>
             </tr>
         
             <tr>
-                <td>Passage with multiple overlapping or hierarchically related concepts (e.g., machine learning, deep learning, neural networks) to test topic discrimination and appropriate granularity</td>
-                <td class="prompt-inputs"><strong>content:</strong> Recent advances in computer vision have been substantially driven by deep learning, particularly convolutional neural networks (CNNs), which represent a specialized category of neural networks optimized for processing image data. While deep learning operates as a subset of machine learning methods, its hierarchical feature learning through multiple layers fundamentally distinguishes it from traditional machine learning approaches. Transfer learning has emerged as a critical technique, enabling practitioners to leverage pre-trained deep learning models—initially developed on large-scale datasets—and fine-tune them for domain-specific computer vision applications such as medical image analysis, object detection, and autonomous vehicle perception. The combination of neural network architectures with transfer learning techniques continues to accelerate progress in semantic segmentation and scene understanding tasks.</td>
-                <td class="criteria">• Identifies all major distinct topics mentioned (machine learning, deep learning, neural networks, convolutional neural networks, transfer learning, computer vision, object detection, semantic segmentation, etc.)<br>• Appropriately distinguishes between hierarchical/overlapping concepts without conflating them (e.g., separates 'machine learning' from 'deep learning', and 'neural networks' from 'convolutional neural networks')</td>
-                <td class="output"><pre>Here are the main topics covered in this text:
-
-1. **Computer Vision** – The primary field of focus, with emphasis on recent advances driven by deep learning
-
-2. **Deep Learning** – A subset of machine learning characterized by hierarchical feature learning across multiple layers
-
-3. **Convolutional Neural Networks (CNNs)** – Specialized neural network architectures optimized for processing image data
-
-4. **Machine Learning** – The broader category that encompasses deep learning approaches
-
-5. **Transfer Learning** – A key technique for adapting pre-trained models to new, domain-specific tasks
-
-6. **Pre-trained Models** – Deep learning models initially trained on large-scale datasets for reuse
-
-7. **Practical Applications**:
-   - Medical image analysis
-   - Object detection
-   - Autonomous vehicle perception
-
-8. **Semantic Segmentation** – Task for understanding and classifying different regions in images
-
-9. **Scene Understanding** – Comprehensive interpretation of visual scenes
-
-**In summary**: The text focuses on how **deep learning and CNNs, particularly through transfer learning**, have advanced computer vision capabilities for real-world applications like medical imaging, autonomous vehicles, and scene analysis.</pre></td>
-                <td class="score-col"><span class="score score-low">2</span></td>
-                <td class="reasoning">The solution completely fails to meet all three mandatory requirements. The task explicitly requires: (1) a JSON array of strings, (2) strings with only topics and no commentary, and (3) ONLY the JSON array as the response. Instead, the solution provides a narrative explanation with numbered points, each containing explanatory text, followed by a summary paragraph. While the analysis demonstrates good content understanding and proper topic distinction, the output format is fundamentally wrong. This is an automatic failure per the mandatory requirements specification.</td>
+                <td>Testing with an interdisciplinary passage mixing concepts from economics, psychology, and sociology to verify extraction across multiple fields and disambiguation of related concepts</td>
+                <td class="prompt-inputs"><strong>content:</strong> Consumer spending decisions emerge from the confluence of individual psychological processes and macroscopic social structures. Behavioral economists document systematic deviations from rational choice theory, including loss aversion and temporal discounting, which disproportionately affect lower-income populations facing acute time poverty. Simultaneously, sociological analysis reveals consumption as a mechanism for social stratification; status consumption driven by reference group comparisons demonstrates that purchasing decisions reflect identity construction and cultural capital rather than individual utility maximization. While conspicuous consumption has been theorized through economic frameworks, its psychological underpinnings—conformity pressures and social anxiety—and sociological consequences—persistent wealth inequality through differential savings rates—underscore the discipline-specific blind spots in isolated analyses. Qualitative research connects consumer debt to social exclusion and weakened community bonds, mechanisms that psychology links to stress and health disparities. Understanding contemporary consumption patterns thus requires bridging behavioral economic mechanisms, individual psychological vulnerabilities, and structural sociological inequalities.</td>
+                <td class="criteria">• Extracts topics spanning all three disciplines: economics, psychology, and sociology<br>• Includes both individual-level constructs (e.g., loss aversion, conformity, temporal discounting) and structural concepts (e.g., social stratification, wealth inequality, cultural capital)</td>
+                <td class="output"><pre>[
+  "Consumer spending decisions",
+  "Behavioral economics",
+  "Rational choice theory",
+  "Loss aversion",
+  "Temporal discounting",
+  "Acute time poverty",
+  "Sociological analysis",
+  "Consumption",
+  "Social stratification",
+  "Status consumption",
+  "Reference group comparisons",
+  "Identity construction",
+  "Cultural capital",
+  "Conspicuous consumption",
+  "Conformity pressures",
+  "Social anxiety",
+  "Wealth inequality",
+  "Differential savings rates",
+  "Consumer debt",
+  "Social exclusion",
+  "Community bonds",
+  "Stress and health disparities",
+  "Psychological vulnerabilities",
+  "Structural inequalities"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it is properly formatted JSON containing 24 clean topic strings without commentary, representing concepts explicitly discussed in the article. It exceeds secondary criteria by comprehensively spanning all three disciplines and including both individual psychological constructs and structural concepts. The only minor quibble is the debatable inclusion of 'Sociological analysis' as a topic when other methodological references are excluded, suggesting very slight inconsistency in topic selection criteria. This does not materially impact the quality of the extraction.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a brief passage (2-3 sentences) containing only 1-2 clear topics to verify the prompt doesn't hallucinate or over-extract</td>
+                <td class="prompt-inputs"><strong>content:</strong> Photosynthesis is the process by which plants convert light energy into chemical energy stored in glucose molecules. Chlorophyll pigments in the thylakoid membranes absorb photons, initiating electron transfer chains that produce ATP and NADPH for the Calvin cycle.</td>
+                <td class="criteria">• Identifies photosynthesis as the primary topic without hallucinating distinct topics from component mechanisms</td>
+                <td class="output"><pre>[
+  "Photosynthesis",
+  "Light energy",
+  "Chemical energy",
+  "Glucose molecules",
+  "Chlorophyll pigments",
+  "Thylakoid membranes",
+  "Photons",
+  "Electron transfer chains",
+  "ATP",
+  "NADPH",
+  "Calvin cycle"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution comprehensively meets all mandatory requirements: it is valid JSON containing an array of clean topic strings with no extraneous commentary, containing every topic explicitly mentioned in the article (Photosynthesis through Calvin cycle), and the response contains only the JSON array. It also satisfies the secondary criterion by identifying photosynthesis as the primary topic and containing no hallucinated or inferred topics—everything extracted is directly from the source text. While one could debate whether listing every component (ATP, NADPH, electron transfer chains, etc.) as a separate topic is granular, the mandatory requirement explicitly asks for 'each topic mentioned in the article,' and all listed topics meet this definition.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage where topics are implied rather than explicitly stated to evaluate whether the prompt infers appropriate topics from context and supporting details</td>
+                <td class="prompt-inputs"><strong>content:</strong> In a longitudinal study spanning 15 years, researchers observed cascading effects following the introduction of apex predators to a previously isolated valley ecosystem. The herbivore populations initially underwent sharp decline, subsequently enabling grassland recovery. This vegetation regrowth led to increased soil stabilization, reducing erosion rates by 62%. Concurrent measurements revealed shifts in microbial communities and enhanced phosphorus availability in previously depleted soils. Organisms at higher trophic levels showed improved body condition scores and reproductive success rates, while decomposition rates accelerated in restored riparian zones.</td>
+                <td class="criteria">• Identifies topics implied through described ecological processes and phenomena (e.g., population dynamics, nutrient cycling, ecosystem restoration) rather than explicitly named<br>• Inferred topics are scientifically accurate and directly supported by contextual details in the passage</td>
+                <td class="output"><pre>[
+  "Longitudinal study",
+  "Cascading effects",
+  "Apex predators",
+  "Isolated valley ecosystem",
+  "Herbivore populations",
+  "Grassland recovery",
+  "Soil stabilization",
+  "Erosion reduction",
+  "Microbial communities",
+  "Phosphorus availability",
+  "Trophic levels",
+  "Body condition scores",
+  "Reproductive success rates",
+  "Decomposition rates",
+  "Riparian zones"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements with proper JSON formatting and clean topic strings covering the passage comprehensively. The secondary criteria emphasize identifying topics 'implied through described ecological processes' rather than just extracting explicit terms. While the solution does include topics that represent ecological processes (cascading effects, grassland recovery, soil stabilization), it primarily extracts specific phenomena mentioned in the text rather than abstracting to broader inferred concepts. The examples in the criteria (population dynamics, nutrient cycling, ecosystem restoration) are demonstrated through the passage but not extracted as single topics. Despite this, the solution is thorough, accurate, and well-organized.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing methodology and analytical techniques as the primary topics (e.g., 'meta-analysis', 'qualitative interviews', 'regression modeling') rather than subject matter</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study employed a mixed-methods approach combining quantitative and qualitative techniques. Structural equation modeling was utilized to test the theoretical framework and assess direct and indirect effects among variables. Propensity score matching was applied to address potential selection bias in observational data, with 1:1 nearest-neighbor matching within a 0.25 caliper. Simultaneously, qualitative interviews with 45 participants were conducted and analyzed using thematic analysis, with codes derived both deductively from the literature and inductively from the data. Secondary analysis of administrative records was performed using machine learning classification algorithms to predict treatment outcomes, with model performance evaluated through cross-validation and ROC analysis.</td>
+                <td class="criteria">• Identifies all major methodological techniques mentioned</td>
+                <td class="output"><pre>[
+  "Mixed-methods approach",
+  "Structural equation modeling",
+  "Theoretical framework",
+  "Direct and indirect effects",
+  "Propensity score matching",
+  "Selection bias",
+  "Observational data",
+  "Nearest-neighbor matching",
+  "Caliper",
+  "Qualitative interviews",
+  "Thematic analysis",
+  "Deductive and inductive coding",
+  "Secondary analysis",
+  "Administrative records",
+  "Machine learning classification algorithms",
+  "Treatment outcomes",
+  "Model performance evaluation",
+  "Cross-validation",
+  "ROC analysis"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">10</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array containing only strings of topics with no extra commentary, formatted as array only with no additional text. It also exceeds the secondary criterion by identifying all major methodological techniques with appropriate phrasing and scope. The topic selection reflects sound judgment about what constitutes extractable methodological topics versus generic terminology or specific parameters.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a historical or humanities passage using proper nouns (specific events, locations, historical figures) to verify distinction between named entities and broader conceptual topics</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Italian Renaissance emerged in fourteenth-century Florence through the convergence of several historical forces. The 1453 fall of Constantinople precipitated the migration of Greek scholars and the rediscovery of classical texts, while the city-state's merchant oligarchy—particularly the Medici family—developed sophisticated patronage networks that sustained artists and intellectuals. Luminaries such as Leonardo da Vinci, Michelangelo, and Sandro Botticelli revolutionized artistic practice through novel applications of linear perspective and anatomical accuracy, while concurrent humanist thinkers like Petrarch and Marsilio Ficino synthesized classical philosophy with contemporary scientific inquiry. This period witnessed the systematic revival of Greco-Roman intellectual traditions, the formalization of secular patronage systems replacing ecclesiastical control, and the conceptual elevation of human agency and reason—developments that would reshape European thought for centuries to come.</td>
+                <td class="criteria">• Extracts multiple distinct topics from the passage<br>• Topics include both specific historical entities and broader conceptual themes</td>
+                <td class="output"><pre>[
+  "Italian Renaissance",
+  "Florence",
+  "Fall of Constantinople",
+  "Migration of Greek scholars",
+  "Rediscovery of classical texts",
+  "Merchant oligarchy",
+  "Medici family",
+  "Patronage networks",
+  "Artistic innovation",
+  "Linear perspective",
+  "Anatomical accuracy",
+  "Humanist philosophy",
+  "Classical philosophy",
+  "Scientific inquiry",
+  "Greco-Roman intellectual traditions",
+  "Secular patronage systems",
+  "Human agency and reason"
+]</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all three mandatory requirements: it is valid JSON containing only topic strings with no extraneous commentary, and delivers just the array with nothing else. It also meets both secondary criteria by extracting 17 distinct topics that include both specific entities and conceptual themes. The primary ambiguity concerns whether individual scholar names constitute extractable 'topics' or serve as examples within broader topical categories (artistic innovation, humanist philosophy). Under standard topic extraction conventions, capturing them within broader themes is reasonable, though a stricter interpretation might expect explicit enumeration of all named entities. The solution is well-executed and comprehensive.</td>
             </tr>
         
             </tbody>

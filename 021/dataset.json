@@ -1,46 +1,88 @@
 [
   {
     "prompt_inputs": {
-      "content": "Recent advances in topological quantum computing leverage non-abelian anyons as qubits to achieve inherent protection against decoherence through topological protection mechanisms. Unlike conventional qubit approaches that rely on stabilizer codes and resource-intensive Toffoli gate implementations, topological systems exploit Majorana fermion braiding to perform quantum operations. The realization of Majorana zero modes in semiconductor-superconductor hybrid structures has enabled experimental demonstrations of non-abelian statistics, a crucial prerequisite for fault-tolerant quantum computation. Furthermore, topological surface codes promise improved logical error rates compared to planar codes by utilizing the inherent topological order in 2D quantum systems, where anyonic excitations encode quantum information through their worldlines."
+      "content": "Modern software engineering increasingly adopts polyglot development approaches, integrating object-oriented programming for encapsulation and structural clarity with functional programming paradigms that emphasize immutability and composability. Reactive programming frameworks address scalability demands in distributed systems, while domain-driven design patterns provide systematic guidance for architectural decisions in complex enterprises. The rise of microservices architecture, enabled by containerization technologies and orchestration platforms such as Kubernetes, has fundamentally transformed deployment and scaling strategies. Concurrently, event-driven architecture and asynchronous processing models have become essential patterns for managing concurrent workloads in high-throughput, fault-tolerant systems."
     },
     "solution_criteria": [
-      "All major technical topics and specialized terminology from the passage are identified",
-      "Output is a valid JSON array of strings"
+      "Extracts all distinct programming paradigms and technical frameworks mentioned",
+      "Returns results formatted as a JSON array of strings"
     ],
     "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
-    "scenario": "Highly technical scientific passage with specialized terminology from a narrow field (e.g., quantum computing or molecular biology) to test handling of domain-specific jargon"
+    "scenario": "Testing with a computer science passage containing multiple programming paradigms and technical frameworks to verify accurate extraction of distinct technical topics"
   },
   {
     "prompt_inputs": {
-      "content": "Recent investigations into the psychological impacts of social media adoption reveal complex relationships between digital engagement patterns and individual wellbeing outcomes. Machine learning algorithms that curate personalized content feeds have been shown to influence cognitive load and information processing behaviors, while simultaneously amplifying existing social inequalities in access to digital literacy resources. The resulting digital divide has profound implications for community engagement and social cohesion, particularly affecting vulnerable populations with limited technological infrastructure. Furthermore, the psychology of algorithm-driven content recommendation systems interacts with behavioral economics principles to shape user attention allocation and decision-making processes. These interconnected dynamics highlight how technological innovation, individual psychology, and macro-level social structures converge in contemporary digital societies, requiring interdisciplinary frameworks to understand emergent effects on public health, social networks, and economic opportunity distribution."
+      "content": "Infection with Staphylococcus aureus can result in acute suppurative lymphadenitis, characterized by inflamed regional lymph nodes and systemic febrile response. The pathophysiological mechanism involves alpha-toxin penetration of epithelial barriers, triggering pattern recognition receptor signaling and subsequent release of pro-inflammatory mediators including tumor necrosis factor-alpha, interleukin-6, and interleukin-8. Clinical manifestations typically include localized edema, erythema, and potential progression to bacteremia and sepsis if left untreated. Diagnostic confirmation via blood culture and lymph node aspiration culture remains the standard, with bacterial identification using Matrix-Assisted Laser Desorption/Ionization time-of-flight mass spectrometry. Therapeutic intervention typically involves broad-spectrum beta-lactam antibiotics targeting bacterial peptidoglycan synthesis, with vancomycin reserved for methicillin-resistant Staphylococcus aureus (MRSA) strains exhibiting altered penicillin-binding proteins. In cases of persistent suppuration, needle aspiration or surgical drainage of purulent material may be necessary to prevent extensive abscess formation in surrounding dermis and subcutaneous adipose tissue."
     },
     "solution_criteria": [
-      "Extracts all major topics from across psychology, technology, and social science domains",
-      "Topics are specific and relevant to the passage content"
+      "Identifies all major topics from the passage",
+      "Correctly extracts Latin nomenclature and specialized medical terminology"
     ],
     "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
-    "scenario": "Interdisciplinary passage mixing psychology, technology, and social science topics to test extraction across multiple academic domains"
+    "scenario": "Testing with a medical/biology passage using Latin nomenclature and technical clinical terminology to assess handling of specialized domain vocabulary"
   },
   {
     "prompt_inputs": {
-      "content": "During early postnatal development, altered sensory input initiates widespread reorganization throughout primary cortical regions. Dendritic spine density increased dramatically within cortico-subcortical pathways, while concurrent elevations in neurotrophic factors and synaptic receptor modifications were observed. These structural and molecular changes correlated with enhanced performance on compensatory behavioral tasks, suggesting coordinated mechanisms linking neural substrate alterations to functional adaptation."
+      "content": "Consumer spending decisions emerge from the confluence of individual psychological processes and macroscopic social structures. Behavioral economists document systematic deviations from rational choice theory, including loss aversion and temporal discounting, which disproportionately affect lower-income populations facing acute time poverty. Simultaneously, sociological analysis reveals consumption as a mechanism for social stratification; status consumption driven by reference group comparisons demonstrates that purchasing decisions reflect identity construction and cultural capital rather than individual utility maximization. While conspicuous consumption has been theorized through economic frameworks, its psychological underpinnings\u2014conformity pressures and social anxiety\u2014and sociological consequences\u2014persistent wealth inequality through differential savings rates\u2014underscore the discipline-specific blind spots in isolated analyses. Qualitative research connects consumer debt to social exclusion and weakened community bonds, mechanisms that psychology links to stress and health disparities. Understanding contemporary consumption patterns thus requires bridging behavioral economic mechanisms, individual psychological vulnerabilities, and structural sociological inequalities."
     },
     "solution_criteria": [
-      "Identifies all major topics despite their implicit nature and lack of explicit labels",
-      "Topics correctly reflect the passage's biological mechanisms and conceptual themes"
+      "Extracts topics spanning all three disciplines: economics, psychology, and sociology",
+      "Includes both individual-level constructs (e.g., loss aversion, conformity, temporal discounting) and structural concepts (e.g., social stratification, wealth inequality, cultural capital)"
     ],
     "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
-    "scenario": "Brief, condensed passage where topics must be inferred rather than explicitly stated, testing extraction from minimal context"
+    "scenario": "Testing with an interdisciplinary passage mixing concepts from economics, psychology, and sociology to verify extraction across multiple fields and disambiguation of related concepts"
   },
   {
     "prompt_inputs": {
-      "content": "Recent advances in computer vision have been substantially driven by deep learning, particularly convolutional neural networks (CNNs), which represent a specialized category of neural networks optimized for processing image data. While deep learning operates as a subset of machine learning methods, its hierarchical feature learning through multiple layers fundamentally distinguishes it from traditional machine learning approaches. Transfer learning has emerged as a critical technique, enabling practitioners to leverage pre-trained deep learning models\u2014initially developed on large-scale datasets\u2014and fine-tune them for domain-specific computer vision applications such as medical image analysis, object detection, and autonomous vehicle perception. The combination of neural network architectures with transfer learning techniques continues to accelerate progress in semantic segmentation and scene understanding tasks."
+      "content": "Recent advances in machine learning (ML) and artificial intelligence (AI) have transformed bioinformatics. Deep neural networks (DNNs) now predict protein structures more accurately than traditional methods, accelerating drug discovery pipelines. CRISPR-Cas9 gene editing systems benefit from AI-optimized guide RNA design, reducing off-target mutations. Natural language processing (NLP) systems extract insights from biomedical literature, while convolutional neural networks (CNNs) improve pathological image analysis. Integration of AI with next-generation sequencing (NGS) enables rapid identification of genetic biomarkers for disease risk prediction."
     },
     "solution_criteria": [
-      "Identifies all major distinct topics mentioned (machine learning, deep learning, neural networks, convolutional neural networks, transfer learning, computer vision, object detection, semantic segmentation, etc.)",
-      "Appropriately distinguishes between hierarchical/overlapping concepts without conflating them (e.g., separates 'machine learning' from 'deep learning', and 'neural networks' from 'convolutional neural networks')"
+      "Identifies all major topics despite heavy use of acronyms and abbreviations",
+      "Returns a JSON array of strings"
     ],
     "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
-    "scenario": "Passage with multiple overlapping or hierarchically related concepts (e.g., machine learning, deep learning, neural networks) to test topic discrimination and appropriate granularity"
+    "scenario": "Testing with a passage heavy in acronyms and abbreviations (e.g., AI, ML, DNA, CRISPR) to assess whether topics are correctly identified despite compressed language"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Photosynthesis is the process by which plants convert light energy into chemical energy stored in glucose molecules. Chlorophyll pigments in the thylakoid membranes absorb photons, initiating electron transfer chains that produce ATP and NADPH for the Calvin cycle."
+    },
+    "solution_criteria": [
+      "Identifies photosynthesis as the primary topic without hallucinating distinct topics from component mechanisms"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a brief passage (2-3 sentences) containing only 1-2 clear topics to verify the prompt doesn't hallucinate or over-extract"
+  },
+  {
+    "prompt_inputs": {
+      "content": "In a longitudinal study spanning 15 years, researchers observed cascading effects following the introduction of apex predators to a previously isolated valley ecosystem. The herbivore populations initially underwent sharp decline, subsequently enabling grassland recovery. This vegetation regrowth led to increased soil stabilization, reducing erosion rates by 62%. Concurrent measurements revealed shifts in microbial communities and enhanced phosphorus availability in previously depleted soils. Organisms at higher trophic levels showed improved body condition scores and reproductive success rates, while decomposition rates accelerated in restored riparian zones."
+    },
+    "solution_criteria": [
+      "Identifies topics implied through described ecological processes and phenomena (e.g., population dynamics, nutrient cycling, ecosystem restoration) rather than explicitly named",
+      "Inferred topics are scientifically accurate and directly supported by contextual details in the passage"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a passage where topics are implied rather than explicitly stated to evaluate whether the prompt infers appropriate topics from context and supporting details"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study employed a mixed-methods approach combining quantitative and qualitative techniques. Structural equation modeling was utilized to test the theoretical framework and assess direct and indirect effects among variables. Propensity score matching was applied to address potential selection bias in observational data, with 1:1 nearest-neighbor matching within a 0.25 caliper. Simultaneously, qualitative interviews with 45 participants were conducted and analyzed using thematic analysis, with codes derived both deductively from the literature and inductively from the data. Secondary analysis of administrative records was performed using machine learning classification algorithms to predict treatment outcomes, with model performance evaluated through cross-validation and ROC analysis."
+    },
+    "solution_criteria": [
+      "Identifies all major methodological techniques mentioned"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a passage containing methodology and analytical techniques as the primary topics (e.g., 'meta-analysis', 'qualitative interviews', 'regression modeling') rather than subject matter"
+  },
+  {
+    "prompt_inputs": {
+      "content": "The Italian Renaissance emerged in fourteenth-century Florence through the convergence of several historical forces. The 1453 fall of Constantinople precipitated the migration of Greek scholars and the rediscovery of classical texts, while the city-state's merchant oligarchy\u2014particularly the Medici family\u2014developed sophisticated patronage networks that sustained artists and intellectuals. Luminaries such as Leonardo da Vinci, Michelangelo, and Sandro Botticelli revolutionized artistic practice through novel applications of linear perspective and anatomical accuracy, while concurrent humanist thinkers like Petrarch and Marsilio Ficino synthesized classical philosophy with contemporary scientific inquiry. This period witnessed the systematic revival of Greco-Roman intellectual traditions, the formalization of secular patronage systems replacing ecclesiastical control, and the conceptual elevation of human agency and reason\u2014developments that would reshape European thought for centuries to come."
+    },
+    "solution_criteria": [
+      "Extracts multiple distinct topics from the passage",
+      "Topics include both specific historical entities and broader conceptual themes"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a historical or humanities passage using proper nouns (specific events, locations, historical figures) to verify distinction between named entities and broader conceptual topics"
   }
 ]
