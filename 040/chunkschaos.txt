@@ -1,0 +1,147 @@
+# Technical Review: Compound CTX-204b vs. XDR-471 — Cross-Domain Status Update
+
+## Table of Contents
+
+1. Background
+2. Medical Research
+3. Legal Status
+4.
+----
+Legal Status
+4. Financial Outlook
+5. Recommendations
+
+## Background
+
+Dr. J.P. Morgan Jr.
+----
+Morgan Jr. and Prof. K.L. Smith (cf. earlier report XDR-EU-03) initiated the
+review.
+----
+earlier report XDR-EU-03) initiated the
+review. The U.S. Dept. of Research assigned case no. CTX-204b-P2A-001 to Dr.
+----
+CTX-204b-P2A-001 to Dr. A.B. Carter
+et al. approx. six months ago.
+----
+six months ago. Dr. Carter collaborated with Mr. T.F. Liu, M.D., Ph.D., and
+Ms.
+----
+Liu, M.D., Ph.D., and
+Ms. E.R. Jones, Esq. to compile findings. The preliminary resp.
+----
+The preliminary resp. final reports were filed with
+the U.S. Food & Drug Admin. (F.D.A.) and the European Medicines Agency (E.M.A.) on Feb. 14
+resp.
+----
+14
+resp. Mar. 3. ## Medical Research
+
+The biomarker panel (Panel ID: XDR-BioMk-v2) achieved approx. 85% sensitivity, i.e.
+----
+85% sensitivity, i.e. it correctly flagged 9 of 10 cases. This exceeded the target of approx. 80%, e.g. as set
+out in Trial ID: CTX204b-P2A-001 (cf.
+----
+as set
+out in Trial ID: CTX204b-P2A-001 (cf. Section 9 of the main report). The assay used
+quantitative PCR, incl. controls for Gene LOC73b, Gene LOC73c, and Gene LOC73d. Results
+vs.
+----
+Results
+vs. placebo: primary biomarker BioMkr-HGF p=0.015, secondary biomarker BioMkr-IGF p=0.042
+resp. p=0.038 across cohorts A, B, and C (n=30 ea.). Adverse events: AE Code CTX-GI-001
+(mild, n=3), AE Code CTX-GI-002 (mild, n=5), AE Code CTX-GI-003 (moderate, n=1, resolved). Dr.
+----
+Dr. A.B. Carter et al. conclude that the compound warrants progression to dose-range finding
+per std. protocol v.
+----
+protocol v. 4.2, sect. 3.1.1, appendix B, para. ii. ## Legal Status
+
+The ruling in Synergy Dynamics v.
+----
+## Legal Status
+
+The ruling in Synergy Dynamics v. Apex Solutions (Docket CV-23-1101, U.S. Dist. Ct., N.D. Cal., Hon.
+----
+Cal., Hon. R.S. Walters, J.) narrowed the interpretation of patent eligibility under 35
+U.S.C. § 101 et seq. Our portfolio (Segment ID: SW-PAT-CORE, approx.
+----
+Our portfolio (Segment ID: SW-PAT-CORE, approx. 340 patents) was
+reviewed by Dr. P.Q. Reed, Esq., and Ms. A.N.
+----
+A.N. Fox, J.D. They identified approx. 12 patents
+potentially affected, e.g. Pat.
+----
+Pat. No. US-10123456-B2 and Pat. No. US-10789012-B1.
+----
+US-10789012-B1. The
+proposed amendments are detailed in Policy Ref: LEG-DP-FRMK-v3, sect. 2, pp. 14–18. Compliance with E.U.
+----
+Compliance with E.U. Reg. (EU) 2016/679 (G.D.P.R.) was confirmed by Mr. H.L. Gross, LL.M.,
+and Ms.
+----
+Gross, LL.M.,
+and Ms. B.T. Haines, M.B.A., resp. as of approx. Q2.
+----
+Q2. Cross-border data transfers (cf. Chapter V, G.D.P.R.) remain subject to review by the I.T. Dept. per std.
+----
+per std. sec. protocol v. 2. ## Financial Outlook
+
+Revenue grew approx.
+----
+## Financial Outlook
+
+Revenue grew approx. 3.1% YoY vs. a forecast of approx. 4.0%. The emerging markets div.
+----
+The emerging markets div. contracted approx. -1.5%, e.g. in sub-Saharan Africa and S.E. Asia.
+----
+Asia. Project Hercules (cf. Q3 report, sect. 3, para. iv.) saved approx.
+----
+iv.) saved approx. USD 2.4 M vs. a target of approx. USD 3.0 M,
+i.e. approx.
+----
+approx. 80% of plan. R&D budget remained at approx. EUR 12.5 M p.a. incl.
+----
+incl. allocations
+for Dr. Carter's team (approx. EUR 1.8 M), Prof. Smith's lab (approx.
+----
+Smith's lab (approx. EUR 2.1 M), and the
+materials science group, incl. Mat. Composite XT-5 (approx. EUR 0.9 M).
+----
+EUR 0.9 M). The CFO, Mr. D.O. Park, C.F.A., and the Controller, Ms. Y.T.
+----
+Y.T. Walsh, C.P.A., recommend an approx. 5% budget
+reduction in non-core R&D (excl. CTX-204b and XDR-471 programs) vs. the prior year plan.
+----
+the prior year plan. ## Recommendations
+
+1. Advance CTX-204b to Phase IIb per std. protocol v. 4.2 (cf.
+----
+4.2 (cf. sect. 3.1.1, appendix B). 2. File patent amendments for Portfolio Segment SW-PAT-CORE, Pat.
+----
+File patent amendments for Portfolio Segment SW-PAT-CORE, Pat. Nos. US-10123456-B2 et al. 3. Reduce non-core R&D budget approx.
+----
+Reduce non-core R&D budget approx. 5% vs. prior year (excl. CTX-204b and XDR-471). 4.
+----
+4. Assign Dr. A.B. Carter et al. to lead the Phase IIb steering committee (cf.
+----
+to lead the Phase IIb steering committee (cf. trial ID). 5. Schedule follow-up review with Mr. H.L.
+----
+H.L. Gross, Esq., and Ms. B.T. Haines, M.B.A., resp. 6.
+----
+6. Report findings to U.S. F.D.A. and E.M.A. approx.
+----
+approx. six weeks after Phase IIb enrollment. 7. Update Policy Ref: LEG-DP-FRMK-v3 incl. the G.D.P.R.
+----
+the G.D.P.R. cross-border transfer clauses. 8. Monitor AE Code CTX-GI-003 closely per std. pharmacovigilance protocol v.
+----
+pharmacovigilance protocol v. 1.1, sect. 4. 9. Engage I.T.
+----
+Engage I.T. Dept. re. sec. protocol v.
+----
+protocol v. 2 compliance approx. 30 days prior to data transfer. 10. Present consolidated findings to the board incl.
+----
+Present consolidated findings to the board incl. Dr. J.P. Morgan Jr. and Prof.
+----
+and Prof. K.L. Smith. 
+----

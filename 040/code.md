@@ -1,0 +1,40 @@
+# C# Code Block — Sentence Chunking Failure
+
+```csharp
+/// <summary>
+/// Processes trial data for compound CTX-204b. Validates all required fields. Returns a
+/// populated TrialReport. Throws ArgumentNullException if data is null. See also: ProcessBatch().
+/// </summary>
+public TrialReport ProcessTrial(TrialData data, string compoundId = "CTX-204b")
+{
+    if (data == null)
+        throw new ArgumentNullException(nameof(data),
+            "Trial data must not be null. Provide a valid TrialData instance. Contact Dr. A.B. Carter et al. if the source data is missing.");
+
+    var eligible = dbContext.Patients
+        .Where(p => p.CohortId == data.CohortId)
+        .Where(p => p.Status == PatientStatus.Enrolled)
+        .OrderBy(p => p.EnrollmentDate)
+        .Select(p => new { p.Id, p.BiomarkerLevel, p.AdverseEvents })
+        .ToList();
+
+    Console.WriteLine($"Processing {eligible.Count} patients. Compound: {compoundId}. Cohort: {data.CohortId}. Analyst: {data.Analyst.FullName}.");
+
+    var summary = new TrialReport
+    {
+        TrialId       = data.TrialId,
+        CompoundId    = compoundId,
+        MeanBiomarker = eligible.Average(p => p.BiomarkerLevel),
+        AeCount       = eligible.Sum(p => p.AdverseEvents.Count()),
+        Status        = eligible.All(p => p.BiomarkerLevel > 0.5)
+                            ? "Efficacious. Proceed to Phase IIb."
+                            : "Inconclusive. Extend enrollment.",
+    };
+
+    logger.LogInformation(
+        "Report generated. TrialId: {TrialId}. MeanBiomarker: {Mean:F2}. AeCount: {Ae}.",
+        summary.TrialId, summary.MeanBiomarker, summary.AeCount);
+
+    return summary;
+}
+```
